@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Tokyo Halal Takeout</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<style>
+			/* Popup CSS */
+			.popup {
+				display: none;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: #fff;
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+				padding: 20px;
+				border-radius: 8px;
+				width: 300px;
+				text-align: center;
+				z-index: 1000;
+			}
+
+			.popup-content h2 {
+				font-size: 18px;
+				margin-bottom: 15px;
+			}
+
+			.get-started-btn {
+				background-color: #4CAF50;
+				color: white;
+				padding: 10px 15px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+
+			.get-started-btn:hover {
+				background-color: #45a049;
+			}
+
+			#overlay {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				z-index: 999;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page">
+			<!-- Header -->
+			<div id="header">
+				<a href="index.html" id="logo"><img src="images/Tokyo Logo.jpg" alt="Tokyo Halal Takeout Logo"></a>
+				<ul id="navigation">
+					<li class="selected first"><a href="index.html">Home</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="contact.html">Contact us</a></li>
+				</ul>
+				<div id="featured">
+					<img src="images/Kebab biryani.jpg" alt="Featured Dish - Kebab Biryani">
+				</div>
+			</div> 
+			<!-- Content -->
+			<div id="content">
+				<div id="home">				
+					<div class="first">
+						<h3>Tokyo Halal Takeout</h3>
+					    <p>Welcome </p>
+					    <p>Hi, I am Mimi. Welcome to my Business Website</p>
+						<h3>Things I have Edited in the Website</h3>
+					</div>
+					<div>
+						<p>Things I have edited in the Website:</p>
+						<ul>
+							<li>Welcome Message Using JS</li>
+							<li>Footer includes my name and ID</li>
+							<li>Added a new JS Function</li>
+							<li>Modified the background color and text color on CSS</li>
+						</ul>
+					</div>
+
+					<!-- Popup -->
+					<div id="welcomePopup" class="popup">
+						<div class="popup-content">
+							<h2>Welcome to My Business Website</h2>
+							<button id="getStartedButton" class="get-started-btn">Get Started</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sidebar -->
+			<div id="sidebar">
+				<div>
+					<h4>Special Offers</h4>
+					<p>Check out our menu for exclusive discounts!</p>
+				</div>
+				<div>
+					<h4>Our Mission</h4>
+					<p>Providing healthy, halal, and tasty meals for everyone!</p>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<div id="footer">
+				<div>
+					<div class="section1">
+						<a href="blog.html"><img src="images/health-benefits.jpg" alt="Health Benefits"></a>
+						<h4>Health Benefits</h4>
+						<p>Halal food is prepared with strict hygiene and ethical standards, resulting in cleaner, healthier meals. It avoids harmful additives and supports better digestion and overall well-being.
+						</p>
+					</div>
+				</div>
+				<div id="footnote">
+					<p>&#169; Mimi Meherin Bashar 23314064</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Overlay for Popup -->
+		<div id="overlay"></div>
+
+		<!-- JavaScript for Popup -->
+		<script>
+			// Show the popup on page load
+			window.onload = function() {
+				const popup = document.getElementById('welcomePopup');
+				const overlay = document.getElementById('overlay');
+				const getStartedButton = document.getElementById('getStartedButton');
+
+				// Show popup and overlay
+				popup.style.display = 'block';
+				overlay.style.display = 'block';
+
+				// Close popup on button click
+				getStartedButton.onclick = function() {
+					popup.style.display = 'none';
+					overlay.style.display = 'none';
+				};
+			};
+		</script>
+	</body>
+</html>
